@@ -1,3 +1,5 @@
+In this tutorial, we are going to make a game like this. Boring right? Please bear with me, step by step and one day we will be able to finish that project of ours about the next gen 100% science based WoW game.
+
 Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction and sooner get us into the interesting part. 
 
 If you yet to know how to get started with Kha, please check [this link](http://kha.tech/download) and [this link](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
