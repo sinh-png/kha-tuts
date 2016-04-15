@@ -1,4 +1,7 @@
-# kha-tuts
+
 My collection of tutorials for Kha. 
 
-Everything in this repo is under public domain, please use anything you find here the way you want if it benefits you.
+Everything in this repository is under public domain EXCEPT for anything inside quote blocks. Please don't hesitate to use anything you find in this repo the way you want EXCEPT for anything inside quote blocks!
+
+Tutorials with "[WIP]" tag are imcomplete so please hold on reading them until the tag get removed otherwise it will be embarrassing for me.
+
