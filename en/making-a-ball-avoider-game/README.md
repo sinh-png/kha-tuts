@@ -430,7 +430,7 @@ In the above example, we only use mouse move event to control our little square.
 
 #####5. Use shader to make our background:
 
-Coding the game-play is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
+Doing the game-play for this game is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
 
 Our fragment shader in GLSL:
 
@@ -585,6 +585,6 @@ You will have to run khamake again (eg: `node kha_path/make html5`) to compile o
 
 And... the rest of this tutorial is in the source codes and their comments. I'm not lazy, it's just that in this case I believe it's easier for us to learn directly from reading the source codes. Well... Admittedly I'm lazy...
 
-I hope this tutorial is useful for you, if not what are you doing all the way down here? Hope to see you again in our next tutorial! (If there ever will be.)
+I hope this tutorial is useful for you, if not what are you doing all the way down here? Hope to see you again soon in our next tutorial! (If there ever will be.)
 
 Happy Kha learning!
