@@ -427,7 +427,7 @@ Notice the changes in onAssetsLoaded. By using `Mouse.get().notify()` we can set
 - Mouse move.
 - Mouse wheel.
 
-In the above example, we only use mouse move event to control our little square. Now you should try putting the balls back.
+In the above example, we only use mouse move event to control our little square. Now you should try putting the balls and the player object together.
 
 #####5. Use shader to make background:
 
