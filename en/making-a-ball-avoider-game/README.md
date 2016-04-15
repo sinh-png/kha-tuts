@@ -582,7 +582,7 @@ class Player {
 }
 ```
 
-You will have to run khamake again (eg: `node kha_path/make html5`) to compile our GLSL shader to GLSL ES the same as when you make any change on assets. Talk about khamake, you can use `--help` to see list of options.
+You will have to run khamake again (eg: `node kha_path/make html5`) to compile our GLSL shader to GLSL ES the same as when you make any change on assets. Talk about khamake, you can use `--help` to see a list of options.
 
 And... the rest of this tutorial is in the source codes and their comments. I'm not lazy, it's just that in this case I believe it's easier for us to learn directly from reading the source codes. Well... Admittedly I'm lazy...
 
