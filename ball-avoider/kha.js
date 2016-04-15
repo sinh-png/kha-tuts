@@ -280,7 +280,7 @@ var Main = function() { };
 $hxClasses["Main"] = Main;
 Main.__name__ = true;
 Main.main = function() {
-	kha_System.init({ title : "Circle Avoider", width : 800, height : 600},function() {
+	kha_System.init({ title : "Ball Avoider", width : 800, height : 600},function() {
 		kha_Assets.loadEverything(Main.onStart);
 	});
 };
