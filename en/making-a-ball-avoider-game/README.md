@@ -11,7 +11,7 @@ Now let's us start making this game together!
 2. [Draw a circle.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#2-draw-a-circle)
 3. [Make some bouncing balls.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#3-make-some-bouncing-balls)
 4. [Make a player object.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#4-make-a-player-object)
-5. [Use shader to make background.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#5-use-shader-to-make-background)
+5. [Use shader to make our background.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#5-use-shader-to-make-our-background)
 
 #####1. Set up our project:
 
@@ -428,7 +428,7 @@ Notice the changes in onAssetsLoaded. By using `Mouse.get().notify()` we can set
 
 In the above example, we only use mouse move event to control our little square. Now you should try putting the balls and the player object together.
 
-#####5. Use shader to make background:
+#####5. Use shader to make our background:
 
 Coding the game-play is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
 
