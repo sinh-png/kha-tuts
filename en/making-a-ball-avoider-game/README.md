@@ -1,4 +1,3 @@
-Happy Kha learning!
 
 In this tutorial, we are going to make [this game](http://hazagames.github.io/kha-tuts/ball-avoider/). The game is boring but please keep your spirit high, step by step and one day we will be able make that next gen open world survive craft 100% science based zombified unicorn MMO game with Kha!
 
@@ -588,3 +587,4 @@ And... the rest of this tutorial is in the source codes and their comments. I'm 
 
 I hope this tutorial is useful for you, if not what are you doing all the way down here? Hope to see you again in our next tutorial! (If there ever will be.)
 
+Happy Kha learning!
