@@ -43,11 +43,11 @@ class Main {
 		// Init Kha.
 		System.init(
 			{ 
-				title: "Circle Avoider",
+				title: "Ball Avoider",
 				width: width,
 				height: height 
 			},
-			function() Assets.loadEverything(onStart) // When the initialization is complete, load all assets.
+			function() Assets.loadEverything(onAssetsLoaded) // When the initialization is complete, load all assets.
 		);
 	}
 	
@@ -88,7 +88,7 @@ class Main {
 	}
 	
 	// Get called when all assets are loaded.
-	static function onStart():Void {
+	static function onAssetsLoaded():Void {
 		// We set listener for rendering.
 		System.notifyOnRender(onRender);
 		
@@ -102,12 +102,14 @@ class Main {
 		// We do this to achieve ratio screen scaling as well as avoid artifacts like tearing, etc.
 		backbuffer = Image.createRenderTarget(width, height);
 		
+		// Setting up our pipeline.
 		_pipeline = new PipelineState();
 		_pipeline.inputLayout = [new VertexStructure()];
 		_pipeline.vertexShader = Shaders.painter_colored_vert; // A Kha built-in vertex shader.
 		_pipeline.fragmentShader = Shaders.grid_frag;
 		_pipeline.compile();
 		
+		// Get the uniform locations.
 		_uTimeLoc = _pipeline.getConstantLocation("time");
 		_uPlayerXLoc = _pipeline.getConstantLocation("playerX");
 	}
@@ -123,6 +125,7 @@ class Main {
 		g2.begin();
 		
 		g2.pipeline = _pipeline;
+		// Send uniform data to our shader. We use g4 for this.
 		g4.setFloat(_uTimeLoc, System.time);
 		g4.setFloat(_uPlayerXLoc, player.position.x + Player.size / 2);
 		g2.fillRect(0, 0, width, height);

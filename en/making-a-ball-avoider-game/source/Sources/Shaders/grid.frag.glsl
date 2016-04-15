@@ -8,8 +8,8 @@ uniform float playerX;
 void main () {
 	
 	vec2 xy = gl_FragCoord.xy;
-	
-	if (mod(xy.x, 20.) < 1. || mod(xy.y + floor(time * 100.), 20.) < 1.) {
+
+	if (mod(xy.x + playerX / 5., 20.) < 1. || mod(xy.y - floor(time * 100.), 20.) < 1.) {
 		float d = distance(xy, vec2(playerX, 600.));
 		gl_FragColor.r = .6 - d / 600.;
 		gl_FragColor.g = sin(xy.x + xy.y) / 3.;
@@ -17,6 +17,4 @@ void main () {
 	}
 
 }
-
-
 

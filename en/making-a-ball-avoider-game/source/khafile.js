@@ -1,4 +1,4 @@
-var project = new Project('Our Bullet Hell Game.');
+var project = new Project('Ball Avoider');
 
 project.addShaders('Sources/Shaders/**');
 project.addAssets('Assets/**');
