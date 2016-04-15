@@ -5,7 +5,8 @@ precision mediump float;
 uniform float time;
 uniform float playerX;
 
-void main () {
+// Either kore() or main() is fine.
+void main() {
 	
 	vec2 xy = gl_FragCoord.xy;
 

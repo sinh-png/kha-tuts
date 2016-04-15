@@ -2,17 +2,17 @@ Happy Kha learning!
 
 In this tutorial, we are going to make [this game](http://hazagames.github.io/kha-tuts/ball-avoider/). The game is boring but please keep your spirit high, step by step and one day we will be able make that next gen open world survive craft 100% science based zombified unicorn MMO game with Kha!
 
-Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction so we can sooner get into the interesting part. 
+Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction so we can sooner get into the more interesting part. 
 
 If you yet to know how to get started with Kha, please check [this link](http://kha.tech/download) and [this link](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
 
 Now let's us start making this game together!
 
-1. Set up our project.
-2. Draw a circle.
-3. Make some bouncing balls.
-4. Make a player object.
-5. Use shader to make background.
+1. [Set up our project.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#1-set-up-our-project)
+2. [Draw a circle.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#2-draw-a-circle)
+3. [Make some bouncing balls.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#3-make-some-bouncing-balls)
+4. [Make a player object.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#4-make-a-player-object)
+5. [Use shader to make background.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#5-use-shader-to-make-background)
 
 #####1. Set up our project:
 
@@ -68,7 +68,7 @@ We init Kha with a title, window size and a callback which when called will load
 
 Let's try building and running our project targeting HTML5 and see if we have a webpage with our set up title.
 
-#####2. Render some shapes:
+#####2. Draw a circle:
 
 ```haxe
 	static function onInitCompleted():Void {
@@ -421,7 +421,7 @@ class Player {
 }
 ```
 
-Notice the changes in onAssetsLoaded. Through `Mouse.get().notify()` we can set listeners for these mouse events:
+Notice the changes in onAssetsLoaded. By using `Mouse.get().notify()` we can set listeners for these mouse events:
 - Mouse down / just pressed.
 - Mouse up / just released.
 - Mouse move.
@@ -433,7 +433,7 @@ In the above example, we only use mouse move event to control our little square.
 
 Coding the game-play is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
 
-Our fragment shader code:
+Our fragment shader in GLSL:
 
 ```glsl
 #ifdef GL_ES
@@ -443,7 +443,8 @@ precision mediump float;
 uniform float time;
 uniform float playerX;
 
-void main () {
+// Either kore() or main() is fine.
+void main() {
 	
 	vec2 xy = gl_FragCoord.xy;
 	xy.y = 600. - xy.y;
@@ -458,7 +459,7 @@ void main () {
 }
 ```
 
-Our Haxe code:
+Our Haxe codes:
 
 ```haxe
 package;
@@ -581,7 +582,9 @@ class Player {
 }
 ```
 
-And... the rest of the tutorial is in the source codes and their comments. I'm not lazy, it's just that I believe in this case, it's easier for us to learn directly from reading the source codes. Well... Admittedly I'm lazy...
+You will have to run khamake again (eg: `node kha_path/make html5') to compile our GLSL shader to GLSL ES the same as when you make any change on assets. Talk about khamake, you can use `--help` to see list of options.
+
+And... the rest of this tutorial is in the source codes and their comments. I'm not lazy, it's just that in this case I believe it's easier for us to learn directly from reading the source codes. Well... Admittedly I'm lazy...
 
 I hope this tutorial is useful for you, if not what are you doing all the way down here? Hope to see you again in our next tutorial! (If there ever will be.)
 
