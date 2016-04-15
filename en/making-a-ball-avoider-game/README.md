@@ -117,7 +117,7 @@ Here I copied from Kha wiki (https://github.com/KTXSoftware/Kha/wiki/kha.graphic
 
 > kha.graphics2 is available on all platforms.
 
-So we use g2 to render 2D graphics onto a framebuffer or an image. g2 by default doesn't have the `fillCircle` method, the method we used is actually a static extension imported via  `using kha.graphics2.GraphicsExtension;`.
+So we use graphics2 to render 2D graphics onto a framebuffer or an image. By default, it doesn't have the `fillCircle` method, the method we used is actually a static extension imported via  `using kha.graphics2.GraphicsExtension;`.
 
 The full source code we have so far:
 
