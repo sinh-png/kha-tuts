@@ -71,10 +71,10 @@ Let's try building and running our project targeting HTML5 and see if we have a 
 
 ```haxe
 	static function onAssetsLoaded():Void {
-		// Set the listener for our rendering loop.
+		// We set listener for rendering.
 		System.notifyOnRender(onRender);
 		
-		// We want onUpdate to be called 60 times a second because 60fps master race!
+		// We want onUpdate to be called 60 times per second because 60fps master race!
 		Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
 	}
 	
