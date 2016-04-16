@@ -107,7 +107,7 @@ static function onRender(framebuffer:Framebuffer):Void {
 }
 ```
 
-We render a filled aqua blue circle at the center of the screen with a radius of 80. g2 is an instance of `kha.graphics2`. So what is this `kha.graphics2`?
+We render a filled aqua blue circle at the center of the screen with a radius of 80. g2 is an instance of `kha.graphics2.Graphics`. So what is this `kha.graphics2`?
 
 Here I copied from Kha wiki (https://github.com/KTXSoftware/Kha/wiki/kha.graphics2):
 
@@ -117,7 +117,7 @@ Here I copied from Kha wiki (https://github.com/KTXSoftware/Kha/wiki/kha.graphic
 
 > kha.graphics2 is available on all platforms.
 
-So we use graphics2 to render 2D graphics onto a framebuffer or an image. By default, it doesn't have the `fillCircle` method, the method we used is actually a static extension imported via  `using kha.graphics2.GraphicsExtension;`.
+So we use graphics2 to render 2D graphics onto a framebuffer or an image. By default, g2 doesn't have the `fillCircle` method, the method we used is actually a static extension imported via  `using kha.graphics2.GraphicsExtension;`.
 
 The full source code we have so far:
 
