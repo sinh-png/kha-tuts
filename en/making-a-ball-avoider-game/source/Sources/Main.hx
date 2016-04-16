@@ -308,9 +308,9 @@ class Ball {
 		var dx = position.x - cx;
 		var dy = position.y - cy;
 
-		var dsqrt = dx * dx + dy * dy;
+		var dsqr = dx * dx + dy * dy;
 		
-		return dsqrt < radius * radius;
+		return dsqr < radius * radius;
 	}
 	
 }
