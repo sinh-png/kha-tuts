@@ -432,7 +432,23 @@ In the above example, we only use mouse move event to control our little square.
 
 Doing the game-play for this game is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
 
-Our fragment shader in GLSL:
+In our khafile.js, we add `project.addShaders('Sources/Shaders/**');`:
+
+```js
+var project = new Project('Ball Avoider');
+
+project.addShaders('Sources/Shaders/**');
+project.addAssets('Assets/**');
+project.addSources('Sources');
+
+// We set the screen size when target Flash and HTML5.
+project.windowOptions.width = 800;
+project.windowOptions.height = 600;
+
+return project;
+```
+
+Our fragment shader in GLSL, we save it as `grid.frag.glsl` in `Sources/Shaders/`:
 
 ```glsl
 #ifdef GL_ES
