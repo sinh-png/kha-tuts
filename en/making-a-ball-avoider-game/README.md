@@ -70,7 +70,7 @@ Let's try building and running our project targeting HTML5 and see if we have a 
 #####2. Draw a circle:
 
 ```haxe
-	static function onInitCompleted():Void {
+	static function onAssetsLoaded():Void {
 		// Set the listener for our rendering loop.
 		System.notifyOnRender(onRender);
 		
