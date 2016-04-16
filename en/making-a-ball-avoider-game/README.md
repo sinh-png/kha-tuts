@@ -297,10 +297,10 @@ class Ball {
 	public var radius:FastFloat;
 	
 	public function new() {
+		radius = 20 + 20 * Math.random();
+	
 		position = new FastVector2(radius + (Main.width - radius * 2) * Math.random(), -radius);
 		velocity = new FastVector2( -3 + 6 * Math.random(), 0);
-		
-		radius = 20 + 20 * Math.random();
 	}
 	
 	public function render(g:Graphics):Void {
