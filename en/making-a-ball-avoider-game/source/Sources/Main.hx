@@ -302,8 +302,11 @@ class Ball {
 	 * Check if this ball is hitting the player object.
 	 */
 	function overlapPlayer():Bool {
-		var cx = Math.min(Math.max(Main.player.position.x, position.x), Main.player.position.x + Player.size);
-		var cy = Math.min(Math.max(Main.player.position.y, position.y), Main.player.position.y + Player.size);
+		var px = Main.player.position.x;
+		var py = Main.player.position.y;
+		
+		var cx = Math.min(Math.max(px, position.x), px + Player.size);
+		var cy = Math.min(Math.max(py, position.y), py + Player.size);
 
 		var dx = position.x - cx;
 		var dy = position.y - cy;
