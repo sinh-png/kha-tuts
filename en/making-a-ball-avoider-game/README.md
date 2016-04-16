@@ -3,7 +3,7 @@ In this tutorial, we are going to make [this game](http://hazagames.github.io/kh
 
 Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction so we can sooner get into the more interesting part. 
 
-If you yet to know how to get started with Kha, please check [this link](http://kha.tech/download) and [this link](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
+If you yet know how to get started with Kha, please check [this link](http://kha.tech/download) and [this link](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
 
 Now let's us start making this game together!
 
@@ -581,7 +581,7 @@ class Player {
 }
 ```
 
-You will have to run khamake again (eg: `node kha_path/make html5`) to compile our GLSL shader to GLSL ES the same as when you make any change on assets. Talk about khamake, you can use `--help` to see a list of options.
+You will have to run khamake again (eg: `node kha_path/make html5`) to compile our GLSL shader to GLSL ES, the same as when you make any change on assets. Talk about khamake, you can use `--help` to see a list of options.
 
 And... the rest of this tutorial is in the source codes and their comments. I'm not lazy, it's just that in this case I believe it's easier for us to learn directly from reading the source codes. Well... Admittedly I'm lazy...
 
