@@ -1,3 +1,3 @@
 
-Some tutorials for Kha.
+Some tutorials for [Kha](http://kha.tech).
 
