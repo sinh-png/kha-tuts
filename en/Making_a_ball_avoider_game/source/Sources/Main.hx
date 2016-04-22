@@ -170,7 +170,7 @@ class Main {
 		
 		var scaleX = framebuffer.width / width; // Get the width ratio.
 		var scaleY = framebuffer.height / height; // Get the height ratio.
-		var scale = scaleX < scaleY ? scaleX : scaleY; // Choose the smaller ratio for scaling.
+		var scale = Math.min(scaleX, scaleY); // Choose the smaller ratio for scaling.
 		
 		// Set transformation matrix. We scale backbuffer to screen size while keeping its ratio.
 		g2.transformation = FastMatrix3.scale(scale, scale);
