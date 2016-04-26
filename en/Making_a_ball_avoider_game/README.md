@@ -39,10 +39,10 @@ import kha.Assets;
 import kha.System;
 
 class Main {
-	
+
 	public static inline var width = 800;
 	public static inline var height = 600;
-	
+
 	public static function main() {
 		System.init( 
 			{ 
@@ -54,12 +54,12 @@ class Main {
 			function() Assets.loadEverything(onAssetsLoaded) // When the initialization is complete, load all assets.
 		);
 	}
-	
+
 	// Get called when all assets are loaded.
 	static function onAssetsLoaded():Void {
-		
+
 	}
-	
+
 }
 ```
 
