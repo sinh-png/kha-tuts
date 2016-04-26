@@ -65,7 +65,7 @@ class Main {
 
 We init Kha with a title, window size and a callback which when called will load all assets. The window size set here won't have any effect on HTML5 and Flash targets, instead we set it via khafile.js.
 
-Let's try building and running our project targeting HTML5 and see if we have a webpage with our set up title.
+Let's try building our project targeting HTML5: ```node Kha/make.js html5```. We can now run it by executing ```node Kha/make.js --server``` and see if we have a webpage served at 127.0.0.1:8080 with our set up title.
 
 #####2. Draw a circle:
 
