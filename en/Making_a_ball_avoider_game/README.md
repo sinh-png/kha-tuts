@@ -30,7 +30,7 @@ project.windowOptions.height = 600;
 return project;
 ```
 
-Then in Main.hx:
+Then in Sources/Main.hx:
 
 ```haxe
 package;
