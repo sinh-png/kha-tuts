@@ -13,7 +13,7 @@ Now let's us start making this game together!
 4. [Make a player object.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#4-make-a-player-object)
 5. [Use shader to make our background.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#5-use-shader-to-make-our-background)
 
-#####1. Set up our project:
+##### 1. Set up our project:
 
 In our [khafile.js](https://github.com/KTXSoftware/Kha/wiki/khafile.js):
 
@@ -67,7 +67,7 @@ We init Kha with a title, window size and a callback which when called will load
 
 Let's try building our project targeting HTML5: ```node Kha/make.js html5```. We can now run it by executing ```node Kha/make.js --server``` and see if we have a webpage served at 127.0.0.1:8080 with our set up title.
 
-#####2. Draw a circle:
+##### 2. Draw a circle:
 
 ```haxe
 	static function onAssetsLoaded():Void {
@@ -175,7 +175,7 @@ class Main {
 
 Still not exciting enough, we need some action.
 
-#####3. Make some bouncing balls:
+##### 3. Make some bouncing balls:
 
 We create a class for our balls:
 
@@ -332,7 +332,7 @@ class Ball {
 }
 ```
 
-#####4. Make a player object:
+##### 4. Make a player object:
 
 ```haxe
 package;
@@ -429,7 +429,7 @@ Notice the changes in onAssetsLoaded. By using `Mouse.get().notify()` we can set
 
 In the above example, we only use mouse move event to control our little square. Now you should try putting the balls and the player object together.
 
-#####5. Use shader to make our background:
+##### 5. Use shader to make our background:
 
 Doing the game-play for this game is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
 
