@@ -350,12 +350,12 @@ import kha.System;
 using kha.graphics2.GraphicsExtension;
 
 class Main {
-	
+
 	public static inline var width = 800;
 	public static inline var height = 600;
-	
+
 	public static var player:Player = new Player();
-	
+
 	public static function main() {
 		System.init( 
 			{ 
@@ -367,57 +367,57 @@ class Main {
 			function() Assets.loadEverything(onAssetsLoaded) // When the initialization is complete, load all assets.
 		);
 	}
-	
+
 	// Get called when all assets are loaded.
 	static function onAssetsLoaded():Void {
 		// We set listener for rendering.
 		System.notifyOnRender(onRender);
-		
+
 		// We want onUpdate to be called 60 times per second because 60fps master race!
 		Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
-		
+
 		// We set listener for mouse move event.
 		Mouse.get().notify(null, null, onMouseMove, null);
 	}
-	
+
 	static function onRender(framebuffer:Framebuffer):Void {
 		var g = framebuffer.g2;
 		g.begin();
 		player.render(g);
 		g.end();
 	}
-	
+
 	static function onUpdate():Void {
-		
+
 	}
-	
+
 	static function onMouseMove(mouseX:Int, mouseY:Int, _, _):Void {
 		player.position.x = mouseX - Player.size / 2;
-		
+
 		if (player.position.x < 0) {
 			player.position.x = 0;
 		} else if (player.position.x > width - Player.size) {
 			player.position.x = width - Player.size; 
 		}
 	}
-	
+
 }
 
 class Player {
-	
+
 	public static inline var size = 32;
 
 	public var position:FastVector2;
-	
+
 	public function new() {
 		position = new FastVector2((Main.width - size) / 2, Main.height - size);
 	}
-	
+
 	public function render(g:Graphics):Void {
 		g.color = 0xffff0000;
 		g.drawRect(position.x, position.y, size, size, 5);
 	}
-	
+
 }
 ```
 
