@@ -244,12 +244,12 @@ import kha.System;
 using kha.graphics2.GraphicsExtension;
 
 class Main {
-	
+
 	public static inline var width = 800;
 	public static inline var height = 600;
-	
+
 	public static var balls:Array<Ball> = new Array<Ball>();
-	
+
 	public static function main() {
 		System.init( 
 			{ 
@@ -261,61 +261,61 @@ class Main {
 			function() Assets.loadEverything(onAssetsLoaded) // When the initialization is complete, load all assets.
 		);
 	}
-	
+
 	// Get called when all assets are loaded.
 	static function onAssetsLoaded():Void {
 		// We set listener for rendering.
 		System.notifyOnRender(onRender);
-		
+
 		// We want onUpdate to be called 60 times per second because 60fps master race!
 		Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
-		
+
 		for (i in 0...10) {
 			balls.push(new Ball());
 		}
 	}
-	
+
 	static function onRender(framebuffer:Framebuffer):Void {
 		var g = framebuffer.g2;
 		g.begin();
 		for (ball in balls) ball.render(g);
 		g.end();
 	}
-	
+
 	static function onUpdate():Void {
 		for (ball in balls) ball.update();
 	}
-	
+
 }
 
 
 class Ball {
-	
+
 	public static inline var gravity = 0.06;
-	
+
 	public var position:FastVector2;
 	public var velocity:FastVector2;
-	
+
 	public var radius:FastFloat;
-	
+
 	public function new() {
 		radius = 20 + 20 * Math.random();
-	
+
 		position = new FastVector2(radius + (Main.width - radius * 2) * Math.random(), -radius);
 		velocity = new FastVector2( -3 + 6 * Math.random(), 0);
 	}
-	
+
 	public function render(g:Graphics):Void {
 		g.color = 0xff00ffff;
 		g.drawCircle(position.x, position.y, radius, 5);
 	}
-	
+
 	public function update():Void {
 		velocity.y += gravity;
-		
+
 		position.x += velocity.x;
 		position.y += velocity.y;
-		
+
 		// Bounce back when hitting left or right edge. 
 		if (
 			(velocity.x > 0 && position.x > Main.width - radius) ||
@@ -323,7 +323,7 @@ class Ball {
 		) {
 			velocity.x *= -1;
 		}
-		
+
 		// Bounce up when hitting the ground.
 		if (velocity.y > 0 && position.y > Main.height - radius) {
 			velocity.y = -radius / 5; // The bigger the ball, the higher it bounces.
