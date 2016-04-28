@@ -497,7 +497,29 @@ void main() {
 }
 ```
 
-Our Haxe codes:
+Set up a [graphics pipeline[(https://en.wikipedia.org/wiki/Graphics_pipeline) to use this shader. Import kha.Shaders, kha.graphics4.PipelineState and kha.graphics4.VertexStructure to create
+
+```haxe
+    static var _pipeline:PipelineState;
+```
+
+in ```class Main``` and in ```onAssetsLoaded()```
+
+```haxe
+		// Setting up our pipeline.
+        _pipeline = new PipelineState();
+        _pipeline.inputLayout = [new VertexStructure()];
+        _pipeline.vertexShader = Shaders.painter_colored_vert; // A Kha built-in vertex shader.
+        _pipeline.fragmentShader = Shaders.grid_frag;
+        _pipeline.compile();
+```
+
+Adjust ```onRender()``` as shown below. Use kha.graphics4.ConstantLocation and
+```haxe
+    static var _uTimeLoc:ConstantLocation;
+    static var _uPlayerXLoc:ConstantLocation;
+```
+to get uniform locations.
 
 ```haxe
 package;
