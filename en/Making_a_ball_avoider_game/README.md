@@ -95,7 +95,7 @@ Let's render a circle to make things more interesting.
 using kha.graphics2.GraphicsExtension;
 ```
 
-I assume you already know what the code above means. If not, check this: http://haxe.org/manual/lf-static-extension.html
+I assume you already know what the code above means. If not, check [the manual](http://haxe.org/manual/lf-static-extension.html).
 
 ```haxe
 static function onRender(framebuffer:Framebuffer):Void {
