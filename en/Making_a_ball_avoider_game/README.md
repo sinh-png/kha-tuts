@@ -133,10 +133,10 @@ import kha.System;
 using kha.graphics2.GraphicsExtension;
 
 class Main {
-	
+
 	public static inline var width = 800;
 	public static inline var height = 600;
-	
+
 	public static function main() {
 		System.init( 
 			{ 
@@ -148,16 +148,16 @@ class Main {
 			function() Assets.loadEverything(onAssetsLoaded) // When the initialization is complete, load all assets.
 		);
 	}
-	
+
 	// Get called when all assets are loaded.
 	static function onAssetsLoaded():Void {
 		// We set listener for rendering.
 		System.notifyOnRender(onRender);
-		
+
 		// We want onUpdate to be called 60 times per second because 60fps master race!
 		Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
 	}
-	
+
 	static function onRender(framebuffer:Framebuffer):Void {
 		var g = framebuffer.g2;
 		g.begin();
@@ -165,11 +165,11 @@ class Main {
 		g.fillCircle(400, 300, 80);
 		g.end();
 	}
-	
+
 	static function onUpdate():Void {
 		
 	}
-	
+
 }
 ```
 
