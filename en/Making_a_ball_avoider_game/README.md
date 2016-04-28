@@ -497,7 +497,7 @@ void main() {
 }
 ```
 
-Set up a [graphics pipeline[(https://en.wikipedia.org/wiki/Graphics_pipeline) to use this shader. Import kha.Shaders, kha.graphics4.PipelineState and kha.graphics4.VertexStructure to create
+Set up a [graphics pipeline](https://en.wikipedia.org/wiki/Graphics_pipeline) to use this shader. Import kha.Shaders, kha.graphics4.PipelineState and kha.graphics4.VertexStructure to create
 
 ```haxe
     static var _pipeline:PipelineState;
