@@ -73,19 +73,19 @@ Let's try building our project targeting HTML5: ```node Kha/make.js html5```. We
 	static function onAssetsLoaded():Void {
 		// We set listener for rendering.
 		System.notifyOnRender(onRender);
-		
+
 		// We want onUpdate to be called 60 times per second because 60fps master race!
 		Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
 	}
-	
+
 	static function onRender(framebuffer:Framebuffer):Void {
-		
+
 	}
-	
+
 	static function onUpdate():Void {
-		
+
 	}
-	
+
 }
 ```
 It's as straight forward as it looks, we do our rendering in onRender and updating in onUpdate.
