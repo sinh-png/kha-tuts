@@ -90,7 +90,7 @@ Let's try building our project targeting HTML5: ```node Kha/make.js html5```. We
 ```
 It's as straight forward as it looks, we do our rendering in onRender and updating in onUpdate.
 
-Let's render a circle to make things more interesting.
+Let's render a circle to make things more interesting. Below the import statements and above the ```class Main``` declaration write
 ```haxe
 using kha.graphics2.GraphicsExtension;
 ```
