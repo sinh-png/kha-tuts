@@ -97,6 +97,7 @@ using kha.graphics2.GraphicsExtension;
 
 I assume you already know what the code above means. If not, check [the manual](http://haxe.org/manual/lf-static-extension.html).
 
+Start extending the ```onRender()``` function.
 ```haxe
 static function onRender(framebuffer:Framebuffer):Void {
 	var g = framebuffer.g2;
