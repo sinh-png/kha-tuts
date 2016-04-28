@@ -177,7 +177,7 @@ Still not exciting enough, we need some action.
 
 ##### 3. Make some bouncing balls:
 
-We create a class for our balls:
+We create a class for our balls below ```class Main```:
 
 ```haxe
 class Ball {
