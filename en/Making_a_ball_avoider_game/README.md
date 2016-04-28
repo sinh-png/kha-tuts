@@ -334,6 +334,28 @@ class Ball {
 
 ##### 4. Make a player object:
 
+Create a new class for a player:
+```haxe
+class Player {
+
+	public static inline var size = 32;
+
+	public var position:FastVector2;
+
+	public function new() {
+		position = new FastVector2((Main.width - size) / 2, Main.height - size);
+	}
+
+	public function render(g:Graphics):Void {
+		g.color = 0xffff0000;
+		g.drawRect(position.x, position.y, size, size, 5);
+	}
+
+}
+```
+
+Instanciate this class via ```public static var player:Player = new Player();``` in ```class Main``` along with the width and height of the screen. In ```onAssetsLoaded()``` add a listener for mouse events. Don't forget ```import kha.input.Mouse;```
+
 ```haxe
 package;
 
