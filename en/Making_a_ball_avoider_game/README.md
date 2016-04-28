@@ -110,7 +110,7 @@ static function onRender(framebuffer:Framebuffer):Void {
 
 We render a filled aqua blue circle at the center of the screen with a radius of 80. g2 is an instance of `kha.graphics2.Graphics`. So what is this `kha.graphics2`?
 
-Here I copied from Kha wiki (https://github.com/KTXSoftware/Kha/wiki/kha.graphics2):
+Here I quote from the article on [kha.graphics2](https://github.com/KTXSoftware/Kha/wiki/kha.graphics2) from the Kha wiki:
 
 > kha.graphics2 is a 2D drawing API providing functions to draw images and basic forms and applying 2D transformations. On platforms which support kha.graphics4 graphics2 additionally provides support for custom shaders.
 
