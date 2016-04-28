@@ -483,10 +483,10 @@ uniform float playerX;
 
 // Either kore() or main() is fine.
 void main() {
-	
+
 	vec2 xy = gl_FragCoord.xy;
 	xy.y = 600. - xy.y;
-	
+
 	if (mod(xy.x + playerX / 5., 20.) < 1. || mod(xy.y - floor(time * 100.), 20.) < 1.) {
 		float d = distance(xy, vec2(playerX, 600.));
 		gl_FragColor.r = .6 - d / 600.;
