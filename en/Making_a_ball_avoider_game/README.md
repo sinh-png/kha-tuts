@@ -224,7 +224,7 @@ class Ball {
 }
 ```
 
-[FastFloat](https://github.com/KTXSoftware/Kha/blob/master/Sources/kha/FastFloat.hx) is a Kha typedef. You can get it via ```import kha.FastFloat;```. When target C++, it is a typedef of cpp.Float32 which is faster than cpp.Float64 and if I am correct, Float when target C++ is Float64 while most of the time Float32 is more than enough for us. Anything else with prefix "Fast" in Kha is probaly a type that uses FastFloat, for examples: FastVector2, FastMatrix3, etc. They can be pulled in via ```import kha.math.FastVector2;``` and so on.
+[FastFloat](https://github.com/KTXSoftware/Kha/blob/master/Sources/kha/FastFloat.hx) is a Kha typedef. You can get it via ```import kha.FastFloat;```. When target C++, it is a typedef of cpp.Float32 which is faster than cpp.Float64 and if I am correct, Float when target C++ is Float64 while most of the time Float32 is more than enough for us. Anything else with prefix "Fast" in Kha is probaly a type that uses FastFloat, for examples: FastVector2, FastMatrix3, etc. They can be pulled in via ```import kha.math.FastVector2;``` and so on. For the function ```render()``` also add ```import kha.graphics2.Graphics;```.
 
 So let's see some bouncing balls in action: 
 
