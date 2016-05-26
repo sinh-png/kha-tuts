@@ -7,11 +7,11 @@ If you don't yet know how to get started with Kha, please check [this link](http
 
 Now let's us start making this game together!
 
-1. [Set up our project.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#1-set-up-our-project)
-2. [Draw a circle.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#2-draw-a-circle)
-3. [Make some bouncing balls.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#3-make-some-bouncing-balls)
-4. [Make a player object.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#4-make-a-player-object)
-5. [Use shader to make our background.](https://github.com/hazagames/kha-tuts/tree/master/en/making-a-ball-avoider-game#5-use-shader-to-make-our-background)
+1. [Set up our project.](https://github.com/hazagames/kha-tuts/tree/master/en/Making_a_ball_avoider_game#1-set-up-our-project)
+2. [Draw a circle.](https://github.com/hazagames/kha-tuts/tree/master/en/Making_a_ball_avoider_game#2-draw-a-circle)
+3. [Make some bouncing balls.](https://github.com/hazagames/kha-tuts/tree/master/en/Making_a_ball_avoider_game#3-make-some-bouncing-balls)
+4. [Make a player object.](https://github.com/hazagames/kha-tuts/tree/master/en/Making_a_ball_avoider_game#4-make-a-player-object)
+5. [Use shader to make our background.](https://github.com/hazagames/kha-tuts/tree/master/en/Making_a_ball_avoider_game#5-use-shader-to-make-our-background)
 
 ##### 1. Set up our project:
 
