@@ -1,9 +1,9 @@
 
-In this tutorial, we are going to make [this game](http://hazagames.github.io/kha-tuts/ball-avoider/). The game is boring but please keep your spirit high, step by step and one day we will be able make that next gen open world survive craft 100% science based zombified unicorn MMO game with Kha!
+In this tutorial, we are going to make [this little game](http://melonin.github.io/kha-tuts/ball-avoider/)/
 
 Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction so we can sooner get into the more interesting part. 
 
-If you don't yet know how to get started with Kha, please check [this link](http://kha.tech/download) and [this link](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
+If you don't yet know how to get started with Kha, please check [this](http://kha.tech/download) and [this](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
 
 Now let's us start making this game together!
 
@@ -95,7 +95,7 @@ Let's render a circle to make things more interesting. Below the import statemen
 using kha.graphics2.GraphicsExtension;
 ```
 
-I assume you already know what the code above means. If not, check [the manual](http://haxe.org/manual/lf-static-extension.html).
+I you don't what `using` does, you can read about it [here](http://haxe.org/manual/lf-static-extension.html).
 
 Start extending the ```onRender()``` function.
 ```haxe
@@ -110,7 +110,7 @@ static function onRender(framebuffer:Framebuffer):Void {
 
 We render a filled aqua blue circle at the center of the screen with a radius of 80. g2 is an instance of `kha.graphics2.Graphics`. So what is this `kha.graphics2`?
 
-Here I quote from the article on [kha.graphics2](https://github.com/KTXSoftware/Kha/wiki/kha.graphics2) from the Kha wiki:
+Here from the article on [kha.graphics2](https://github.com/KTXSoftware/Kha/wiki/kha.graphics2) from the Kha wiki:
 
 > kha.graphics2 is a 2D drawing API providing functions to draw images and basic forms and applying 2D transformations. On platforms which support kha.graphics4 graphics2 additionally provides support for custom shaders.
 
@@ -453,7 +453,7 @@ In the above example, we only use mouse move event to control our little square.
 
 ##### 5. Use shader to make our background:
 
-Doing the game-play for this game is kinda boring and not very specific about Kha so we will skip that for now and try out something cooler, shader.
+Writing the game-play for this game is not very fun and specific about Kha so we will skip that for now and try out something cooler, shader.
 
 In our khafile.js, we add `project.addShaders('Sources/Shaders/**');`:
 
@@ -644,8 +644,6 @@ class Player {
 
 You will have to run khamake again (eg: `node kha_path/make html5`) to compile our GLSL shader to GLSL ES, the same as when you make any change on assets. Talk about khamake, you can use `--help` to see a list of options.
 
-And... the rest of this tutorial is in the source codes and their comments. I'm not lazy, it's just that in this case I believe it's easier for us to learn directly from reading the source codes. Well... Admittedly I'm lazy...
-
-I hope this tutorial is useful for you, if not what are you doing all the way down here? Hope to see you again soon in our next tutorial! (If there ever will be.)
+The rest of this tutorial is in the [source](https://en.wikipedia.org/wiki/Graphics_pipeline) and its comments.
 
 Happy Kha learning!
