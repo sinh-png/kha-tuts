@@ -1,5 +1,5 @@
 
-In this tutorial, we are going to make [this little game](http://melonin.github.io/kha-tuts/ball-avoider/)/
+In this tutorial, we are going to make [this little game](http://sinh-png.github.io/kha-tuts/ball-avoider/).
 
 Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction so we can sooner get into the more interesting part. 
 
