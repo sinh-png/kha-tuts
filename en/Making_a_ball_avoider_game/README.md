@@ -3,7 +3,7 @@ In this tutorial, we are going to make [this little game](http://sinh-png.github
 
 Assume that you already know what [**Haxe**](http://haxe.org/) and [**Kha**](http://kha.tech) are, I will skip the boring introduction so we can sooner get into the more interesting part. 
 
-If you don't yet know how to get started with Kha, please check [this](http://kha.tech/download) and [this](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
+If you don't yet to know how to get started with Kha, please check [this](http://kha.tech/download) and [this](https://github.com/KTXSoftware/Kha/wiki/Getting-Started).
 
 Now let's us start making this game together!
 
@@ -70,21 +70,19 @@ Let's try building our project targeting HTML5: ```node Kha/make.js html5```. We
 ##### 2. Draw a circle:
 
 ```haxe
-	static function onAssetsLoaded():Void {
-		// We set listener for rendering.
-		System.notifyOnRender(onRender);
+static function onAssetsLoaded():Void {
+	// We set listener for rendering.
+	System.notifyOnRender(onRender);
 
-		// We want onUpdate to be called 60 times per second because 60fps master race!
-		Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
-	}
+	// We want onUpdate to be called 60 times per second because 60fps master race!
+	Scheduler.addTimeTask(onUpdate, 0, 1 / 60);
+}
 
-	static function onRender(framebuffer:Framebuffer):Void {
+static function onRender(framebuffer:Framebuffer):Void {
 
-	}
+}
 
-	static function onUpdate():Void {
-
-	}
+static function onUpdate():Void {
 
 }
 ```
@@ -95,7 +93,7 @@ Let's render a circle to make things more interesting. Below the import statemen
 using kha.graphics2.GraphicsExtension;
 ```
 
-I you don't what `using` does, you can read about it [here](http://haxe.org/manual/lf-static-extension.html).
+If you don't know what `using` does, you can read about it [here](http://haxe.org/manual/lf-static-extension.html).
 
 Start extending the ```onRender()``` function.
 ```haxe
@@ -108,7 +106,7 @@ static function onRender(framebuffer:Framebuffer):Void {
 }
 ```
 
-We render a filled aqua blue circle at the center of the screen with a radius of 80. g2 is an instance of `kha.graphics2.Graphics`. So what is this `kha.graphics2`?
+We render a filled blue circle at the center of the screen with a radius of 80. g2 is an instance of `kha.graphics2.Graphics`. So what is this `kha.graphics2`?
 
 Here from the article on [kha.graphics2](https://github.com/KTXSoftware/Kha/wiki/kha.graphics2) from the Kha wiki:
 
@@ -500,24 +498,24 @@ void main() {
 Set up a [graphics pipeline](https://en.wikipedia.org/wiki/Graphics_pipeline) to use this shader. Import kha.Shaders, kha.graphics4.PipelineState and kha.graphics4.VertexStructure to create
 
 ```haxe
-    static var _pipeline:PipelineState;
+static var _pipeline:PipelineState;
 ```
 
 in ```class Main``` and in ```onAssetsLoaded()```
 
 ```haxe
-		// Setting up our pipeline.
-        _pipeline = new PipelineState();
-        _pipeline.inputLayout = [new VertexStructure()];
-        _pipeline.vertexShader = Shaders.painter_colored_vert; // A Kha built-in vertex shader.
-        _pipeline.fragmentShader = Shaders.grid_frag;
-        _pipeline.compile();
+// Setting up our pipeline.
+_pipeline = new PipelineState();
+_pipeline.inputLayout = [new VertexStructure()];
+_pipeline.vertexShader = Shaders.painter_colored_vert; // A Kha built-in vertex shader.
+_pipeline.fragmentShader = Shaders.grid_frag;
+_pipeline.compile();
 ```
 
 Adjust ```onRender()``` as shown below. Use kha.graphics4.ConstantLocation and
 ```haxe
-    static var _uTimeLoc:ConstantLocation;
-    static var _uPlayerXLoc:ConstantLocation;
+static var _uTimeLoc:ConstantLocation;
+static var _uPlayerXLoc:ConstantLocation;
 ```
 to get uniform locations.
 
@@ -644,6 +642,6 @@ class Player {
 
 You will have to run khamake again (eg: `node kha_path/make html5`) to compile our GLSL shader to GLSL ES, the same as when you make any change on assets. Talk about khamake, you can use `--help` to see a list of options.
 
-The rest of this tutorial is in the [source](https://en.wikipedia.org/wiki/Graphics_pipeline) and its comments.
+The rest of this tutorial is in the [source](https://github.com/sinh-png/kha-tuts/tree/master/en/Making_a_ball_avoider_game/source) and its comments.
 
 Happy Kha learning!
